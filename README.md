@@ -19,11 +19,11 @@ Se utiliza Python 3.12. Instala también Git, SQL Server, SQL Server Management 
 
 ### 1. Copiar el código
 
-Cuando esté publicado el repositorio privado, inicia sesión con una cuenta que tenga acceso y ejecuta:
+Inicia sesión con una cuenta que tenga acceso al repositorio y ejecuta:
 
 ```powershell
-git clone https://github.com/DMendez455/MAGIS-AUTO.git
-cd MAGIS-AUTO
+git clone https://github.com/Leslyk1/Magis-auto.git
+cd Magis-auto
 py -3.12 -m venv venv
 .\venv\Scripts\python.exe -m pip install -r requirements.txt
 ```
