@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#163e35">
+
+    <title>MAGIS-AUTO | Gestión financiera</title>
+
+    <link rel="stylesheet" href="estilos.css">
+    <script defer src="app.js"></script>
+</head>
+
+<body>
+
+    <a class="skip" href="#contenido">Ir al contenido</a>
+
+    <div class="app">
+
+        <!-- Menú lateral -->
+        <aside class="sidebar" id="magisNav">
+
+            <!-- Logo del sistema -->
+            <a class="brand" href="#" onclick="mostrarInicio(); return false">
+                <span class="brand-mark">
+                    M
+                    <span>↗</span>
+                </span>
+
+                <span>
+                    MAGIS
+                    <span class="brand-sub">AUTO FINANCE</span>
+                </span>
+            </a>
+
+            <div class="workspace">
+                PLATAFORMA DE GESTIÓN
+                <span>01</span>
+            </div>
+
+            <!-- Opciones del menú -->
+            <nav aria-label="Navegación principal">
+
+                <button type="button" data-module="inicio"
+                    onclick="mostrarInicio()">
+                    <span aria-hidden="true">▧</span>
+                    Vista general
+                </button>
+
+                <span class="nav-label">OPERACIONES</span>
+
+                <button type="button" data-module="clientes"
+                    onclick="abrirModulo('clientes')">
+                    <span aria-hidden="true">◎</span>
+                    Clientes
+                </button>
+
+                <button type="button" data-module="creditos"
+                    onclick="abrirModulo('creditos')">
+                    <span aria-hidden="true">↗</span>
+                    Créditos
+                </button>
+
+                <button type="button" data-module="vehiculos"
+                    onclick="abrirModulo('vehiculos')">
+                    <span aria-hidden="true">◇</span>
+                    Vehículos
+                </button>
+
+                <button type="button" data-module="garantias"
+                    onclick="abrirModulo('garantias')">
+                    <span aria-hidden="true">⬡</span>
+                    Garantías
+                </button>
+
+                <button type="button" data-module="pagos"
+                    onclick="abrirModulo('pagos')">
+                    <span aria-hidden="true">↓</span>
+                    Pagos
+                </button>
+
+                <button type="button" data-module="cuotas"
+                    onclick="abrirModulo('cuotas')">
+                    <span aria-hidden="true">≡</span>
+                    Cuotas
+                </button>
+
+                <span class="nav-label">GESTIÓN DE PERSONAS</span>
+
+                <button type="button" data-module="vendedores"
+                    onclick="abrirModulo('vendedores')">
+                    <span aria-hidden="true">◉</span>
+                    Vendedores
+                </button>
+
+                <button type="button" data-module="deudores"
+                    onclick="abrirModulo('deudores')">
+                    <span aria-hidden="true">◎</span>
+                    Deudores
+                </button>
+
+                <button type="button" data-module="fiadores"
+                    onclick="abrirModulo('fiadores')">
+                    <span aria-hidden="true">⊕</span>
+                    Fiadores
+                </button>
+
+                <button type="button" data-module="referencias"
+                    onclick="abrirModulo('referencias')">
+                    <span aria-hidden="true">⌁</span>
+                    Referencias
+                </button>
+
+                <span class="nav-label">ANÁLISIS Y SISTEMA</span>
+
+                <button type="button" data-module="catalogos"
+                    onclick="abrirModulo('catalogos')">
+                    <span aria-hidden="true">▦</span>
+                    Catálogos
+                </button>
+
+                <button type="button" data-module="reportes"
+                    onclick="abrirModulo('reportes')">
+                    <span aria-hidden="true">◴</span>
+                    Reportes
+                </button>
+
+            </nav>
+
+            <!-- Estado de conexión -->
+            <div class="sidebar-foot">
+                <span class="connection-dot"></span>
+
+                <span id="magisConnection" role="status">
+                    Sin verificar conexión
+                </span>
+
+                <small>MAGIS-AUTO · Gestión financiera</small>
+            </div>
+
+        </aside>
+
+        <!-- Área principal del sistema -->
+        <section class="application">
+
+            <!-- Barra superior -->
+            <header class="topbar">
+
+                <button type="button" class="mobile-toggle"
+                    aria-controls="magisNav"
+                    aria-expanded="false"
+                    aria-label="Abrir navegación">
+                    ☰
+                </button>
+
+                <div class="breadcrumb">
+                    Espacio de trabajo
+                    <span>/</span>
+                    <strong id="magisPage">Vista general</strong>
+                </div>
+
+                <div class="top-actions">
+                    <time id="magisDate"></time>
+                    <span class="avatar" aria-label="MAGIS-AUTO">MA</span>
+                </div>
+
+            </header>
+
+            <!-- Aquí JavaScript muestra los módulos -->
+            <main id="contenido" tabindex="-1"
+                aria-label="Contenido principal">
+            </main>
+
+            <!-- Pie de página -->
+            <footer>
+                MAGIS-AUTO
+                <span>Tu operación, en perspectiva.</span>
+            </footer>
+
+        </section>
+
+    </div>
+
+</body>
+
+</html>

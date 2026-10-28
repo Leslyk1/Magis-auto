@@ -1,0 +1,29 @@
+# Entornos y archivos generados por Python
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Configuración privada y credenciales
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Respaldos y archivos de SQL Server: se trasladan por separado
+*.bak
+*.trn
+*.mdf
+*.ndf
+*.ldf
+*.bacpac
+
+# Archivos temporales del equipo y del editor
+.vscode/
+.idea/
+*.log
+*.tmp
+Thumbs.db
+.DS_Store
